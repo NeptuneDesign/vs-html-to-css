@@ -2,7 +2,7 @@
 	"name": "vs-html-to-css",
 	"displayName": "VS HTML to CSS",
 	"description": "Generate CSS classes from HTML structure",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "neptunedesign",
 	"author": {
 		"name": "Fortez Fabrice",

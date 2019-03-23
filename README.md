@@ -1,6 +1,10 @@
-# VS HTML to CSS
+# [VS HTML to CSS](https://marketplace.visualstudio.com/items?itemName=neptunedesign.vs-html-to-css)
 
 Generate CSS classes from HTML structure
+
+## Screenshot
+
+![Demo](https://raw.githubusercontent.com/NeptuneDesign/vs-html-to-css/master/images/screenshot.gif)
 
 ## Features
 
@@ -31,6 +35,10 @@ Open `Preferences` -> `Settings`
 ```
 
 ## Release Notes
+
+### 0.0.2
+
+- Update of the README.md file
 
 ### 0.0.1
 
