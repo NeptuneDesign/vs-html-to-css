@@ -1,0 +1,84 @@
+{
+	"name": "vs-html-to-css",
+	"displayName": "VS HTML to CSS",
+	"description": "Generate CSS classes from HTML structure",
+	"version": "0.0.1",
+	"publisher": "neptunedesign",
+	"author": {
+		"name": "Fortez Fabrice",
+		"email": "contact@neptune-design.fr",
+		"url": "https://neptune-design.fr"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/neptunedesign/vs-html-to-css"
+	},
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"keywords": [
+		"html", "css", "productivity"
+	],
+	"categories": [
+		"Formatters", "Other"
+	],
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#423B55",
+		"theme": "dark"
+	},
+	"activationEvents": [
+		"onCommand:vs-html-to-css.generate"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "vs-html-to-css.generate",
+				"title": "HTML to CSS : Generate"
+			}
+		],
+		"keybindings": {
+			"command": "vs-html-to-css.generate",
+			"key": "alt+x",
+			"when": "editorHasSelection"
+		},
+		"configuration": {
+			"type": "object",
+			"title": "VS HTML to CSS",
+			"properties": {
+				"vs-html-to-css.append": {
+					"default": " {\n}\n",
+					"description": "Character(s) to be added after the classes CSS (including blank spaces)"
+				},
+				"vs-html-to-css.disableNotification": {
+					"type": "boolean",
+					"default": false,
+					"description": "Disable notification"
+				},
+				"vs-html-to-css.ignore": {
+					"type": "array",
+					"default": [
+						"container",
+						"row"
+					],
+					"description": "Lists of classes CSS to ignore"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"eslint": "^5.13.0",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"collect.js": "^4.6.4"
+	}
+}
